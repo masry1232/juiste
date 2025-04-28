@@ -1,0 +1,14 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+taxeshelp.cash.app	TRUE	/s	FALSE	1999999999	renderCtx	%7B%22pageId%22%3A%22c4cd593a-a1c0-4924-b8a2-277715632b0d%22%2C%22schema%22%3A%22Published%22%2C%22viewType%22%3A%22Published%22%2C%22brandingSetId%22%3A%2260fbad00-f1ad-4731-9d1c-420769a58777%22%2C%22audienceIds%22%3A%22%22%7D
+cash.app	TRUE	/	FALSE	1999999999	__nsid	51e88596-759a-48e3-b18b-c1c634a76def
+cash.app	TRUE	/	FALSE	1999999999	__wrid	0dcc9e8b-d8ad-4578-a7b4-3565015cabb9
+taxeshelp.cash.app	TRUE	/	FALSE	1999999999	CookieConsentPolicy	0:1
+taxeshelp.cash.app	TRUE	/	FALSE	1999999999	LSKey-c$CookieConsentPolicy	0:1
+.cash.app	TRUE	/	FALSE	1999999999	ak_bmsc	043CEE7FAD7C74FE94DBD550F34A3205~000000000000000000000000000000~YAAQLVcQYJThSSaWAQAAFiVNUxsaN7KBq1+pnLDq28M5NGUgmUf17S+0GyOC3bSOSiDQwr3gQsXSTtXhabxnVBu9a8YUxkh7rot3X/h/upkjaiOVvaBsGAjNtbj/4uTq0GXZ413x4R8WtXVb4sVjVjCsdBEZd6KUZxDpaSa8utr4tftHhzTG3L8nvDDRpFslPw+2yDxnSy8OF+YNOyzzFeXLdy0oO2SZUteAX/B/UuDZ45zAynfVWAiEldjtoN3+Ld4zbxHtNjjyKy96BwyfETsgPOa8oywUYN6y+QQ83t5xfGt2YNQq970wGbVqwJ1YNGmpB+mjUZ+nyKUH4Icb0dEpmP33
+taxeshelp.cash.app	TRUE	/	FALSE	1999999999	force-stream	!zJG+SLUOdSlQKuIax1F5QoLabZc2S2msB43usD7sTwytTgA8bWs5g9idgikEQE/1nB4rPkn+ZtyLEgs=
+taxeshelp.cash.app	TRUE	/	FALSE	1999999999	SameSite	None
+.cash.app	TRUE	/	FALSE	1999999999	bm_sv	FFDA4B7E997FFEF6001E5A8A1321D401~YAAQKlcQYISZOUiWAQAAcFdOUxtzoLNagJ/KOLIKhAc70a2omRwmYZJQBySnZSNJGmB+5R1G/nLtLebF21O6OotZ38gyYa2mrLK8JTSh6lKbpT3LawT1Vf9/0A2zgiSQdaV226aMm/gRFOXtJ+jvWrLiFqt4X1SOWJwKmltrv+pghq1yXitJ3Onrob/kvtDYOr3/x0O8qbBk6h1sl+8pR3/0pvbCsqcNaQLxCpkrJg2Uc0zhySc0LPQA4OmM8g==~1
+.cash.app	TRUE	/	FALSE	1999999999	__cf_bm	aexbXU6gvLd58GA7UWAhlq11qp_CgRfxIZT6laUN40g-1745154538-1.0.1.1-zNw9O3PfENChmsW87DffpOMQuKFMqAXIXOE3OpQaMdiFLj7Ck7i1imR8O_msgZyl21ZkIzxMbzUMxFyThPBAFIHUfDjiF1oN_lR6moesVqYRm6wWe4TxnAvYSv6eRmL1
+cash.app	TRUE	/	FALSE	1999999999	SameSite	None
+

@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6961],{384:(_,s,u)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/outsmart-scams/[slug]",function(){return u(37383)}])}},_=>{var s=s=>_(_.s=s);_.O(0,[7090,5437,8137,1079,2697,6593,636,8792],()=>s(384)),_N_E=_.O()}]);

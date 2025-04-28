@@ -1,0 +1,222 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Algemene body instellingen */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* De container voor de login sectie */
+  .login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo instellingen */
+  .login-logo img {
+    width: 160px; /* Logo aangepast naar grotere grootte */
+    margin-bottom: 30px;
+  }
+  
+  /* Login titel */
+  .login-title {
+    font-size: 26px; /* Grotere titel */
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  /* Subtekst voor login uitleg */
+  .login-subtext {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+  }
+  
+  /* Formuliervelden */
+  .login-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Hoekjes van de velden ronder */
+    font-size: 16px;
+    outline: none;
+    color: #333;
+  }
+  
+  /* Focus effect op invoervelden */
+  .login-input:focus {
+    border-color: #4B98F7;
+  }
+  
+  /* Button */
+  .login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4B98F7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px; /* Knoppen afgerond */
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #3483f3;
+  }
+  
+  /* Forgot password link */
+  .forgot-password {
+    text-decoration: none;
+    color: #4B98F7;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    text-align: center; /* Zorg ervoor dat de link in het midden staat */
+  }
+
+
+  
+  
+  /* Sign up link */
+  .sign-up {
+    margin-top: 15px;
+  }
+  
+  .sign-up a {
+    text-decoration: none;
+    color: #4B98F7;
+    font-size: 14px;
+  }
+  
+  /* Disclaimer onderaan de pagina */
+  .disclaimer {
+    font-size: 12px;
+    color: #888;
+    margin-top: 30px;
+  }
+  
+  .disclaimer a {
+    color: #4B98F7;
+    text-decoration: none;
+  }
+  /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Algemene body instellingen */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* De container voor de login sectie */
+.login-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo instellingen */
+.login-logo img {
+  width: 160px; /* Logo aangepast naar grotere grootte */
+  margin-bottom: 30px;
+}
+
+/* Login titel */
+.login-title {
+  font-size: 26px; /* Grotere titel */
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Subtekst voor login uitleg */
+.login-subtext {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 25px;
+}
+
+/* Formuliervelden */
+.login-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Hoekjes van de velden ronder */
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+/* Focus effect op invoervelden */
+.login-input:focus {
+  border-color: #4B98F7;
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4B98F7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px; /* Knoppen afgerond */
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #3483f3;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-decoration: none;
+  color: #4B98F7;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  text-align: center; /* Zorg ervoor dat de link in het midden staat */
+}
+
+/* Disclaimer onderaan de pagina */
+.disclaimer {
+  font-size: 12px;
+  color: #888;
+  margin-top: 30px;
+}
+
+.disclaimer a {
+  color: #4B98F7;
+  text-decoration: none;
+}

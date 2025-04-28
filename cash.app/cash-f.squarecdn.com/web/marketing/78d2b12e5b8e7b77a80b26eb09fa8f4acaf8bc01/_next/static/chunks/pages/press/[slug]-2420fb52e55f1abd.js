@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8927],{23200:(_,e,s)=>{"use strict";s.r(e),s.d(e,{__N_SSG:()=>n,default:()=>r});var u=s(37383),n=!0;let r=u.default},59210:(_,e,s)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/press/[slug]",function(){return s(23200)}])}},_=>{var e=e=>_(_.s=e);_.O(0,[7090,5437,8137,1079,2697,6593,636,8792],()=>e(59210)),_N_E=_.O()}]);

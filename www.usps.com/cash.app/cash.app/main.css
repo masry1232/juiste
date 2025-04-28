@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  .logo {
+    height: 32px;
+  }
+  
+  .verify-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .verify-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  .code-input {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background-color: #00d54b;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .resend-btn {
+    margin-top: 10px;
+    background: none;
+    color: #00d54b;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #888;
+    font-size: 0.8rem;
+  }
+  /* Voor mobiele apparaten */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;  /* Zorg ervoor dat het formulier breed genoeg is op kleinere schermen */
+  }
+
+  input, button {
+    font-size: 16px;  /* Verklein de tekst voor mobiel gebruik */
+    padding: 12px;
+  }
+
+  .footer {
+    font-size: 10px;  /* Kleinere tekst onderaan voor mobiel */
+  }
+}

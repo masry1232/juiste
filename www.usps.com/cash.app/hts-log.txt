@@ -1,0 +1,332 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 20 Apr 2025 15:01:42 at https://cash.app/ +*.cash.app/* +*.squarecdn.com/* +*.css +*.js +*.woff +*.woff2
+5500
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Browser's identity (Mozilla/5.0)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://cash.app/ -O1 "C:\Users\A\Desktop\cash.app" +*.cash.app/* +*.squarecdn.com/* +*.css +*.js +*.woff +*.woff2 )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+
+	such as username/password authentication for websites mirrored in this project
+
+	do not share these files/folders if you want these information to remain private
+
+
+
+15:05:47	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://cash.app/taxes)
+
+15:05:49	Warning: 	Note: due to https://taxeshelp.cash.app remote robots.txt rules, links beginning with these path will be forbidden: */secur/forgotpassword.jsp?* (see in the options to disable this)
+
+15:06:01	Warning: 	Moved Permanently for https://cash.app/launch/taxes/r/?source=lp_cat_file&shortlink=catlpfile&c=Taxes E-File CAT LP&pid=taxes&deep_link_value=https%3A%2F%2Fcash.app%2Flaunch%2Ftaxes&source_caller=ui
+
+15:06:01	Warning: 	File has moved from https://cash.app/launch/taxes/r/?source=lp_cat_file&shortlink=catlpfile&c=Taxes E-File CAT LP&pid=taxes&deep_link_value=https%3A%2F%2Fcash.app%2Flaunch%2Ftaxes&source_caller=ui to https://taxes.cash.app/r/?c=Taxes%20E-File%20CAT%20LP&pid=taxes&source=lp_cat_file&source_caller=ui&shortlink=catlpfile&deep_link_value=https%3A%2F%2Fcash.app%2Flaunch%2Ftaxes
+
+15:06:18	Warning: 	Link https://cash.app/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
+
+15:06:32	Error: 	"Forbidden" (403) at link https://cash-f.squarecdn.com/static/fonts/cashsans/woff2/CashSansWide-SemiBold.woff2 (from https://cash.app/support)
+
+15:07:15	Error: 	"Not Found" (404) at link https://cash.app/$help%23chat (from https://cash.app/help)
+
+15:07:17	Error: 	"Not Found" (404) at link https://status.cash.app/inactive.atom (from https://status.cash.app/)
+
+15:07:17	Error: 	"Not Found" (404) at link https://status.cash.app/inactive.rss (from https://status.cash.app/)
+
+15:07:20	Warning: 	Link https://status.cash.app/incidents/l6jg8j5qhfqv not scanned (follow robots meta tag)
+
+15:07:21	Warning: 	Link https://status.cash.app/incidents/xdq2zfws77qr not scanned (follow robots meta tag)
+
+15:07:25	Error: 	"Not Found" (404) at link https://taxeshelp.cash.app/s/sfsites/c/resource/CashSans/CashSans/otf/CashMarket-Regular.otf (from https://taxeshelp.cash.app/s/article/Cash-App-Taxes-Doesn-t-Support-Non-US-Logins)
+
+15:07:25	Error: 	"Not Found" (404) at link https://taxeshelp.cash.app/s/sfsites/c/resource/CashSans/CashSans/otf/CashMarket-Medium.otf (from https://taxeshelp.cash.app/s/article/Cash-App-Taxes-Doesn-t-Support-Non-US-Logins)
+
+15:07:26	Warning: 	Found for https://taxes.cash.app/robots.txt
+
+15:07:26	Warning: 	File has moved from https://taxes.cash.app/robots.txt to https://taxeshelp.cash.app/s/article/Cash-App-Taxes-Doesn-t-Support-Non-US-Logins
+
+15:07:26	Warning: 	Found for https://taxes.cash.app/r/?c=Taxes%20E-File%20CAT%20LP%26pid=taxes%26source=lp_cat_file%26source_caller=ui%26shortlink=catlpfile%26deep_link_value=https%3A%2F%2Fcash.app%2Flaunch%2Ftaxes
+
+15:07:26	Warning: 	File has moved from https://taxes.cash.app/r/?c=Taxes%20E-File%20CAT%20LP%26pid=taxes%26source=lp_cat_file%26source_caller=ui%26shortlink=catlpfile%26deep_link_value=https%3A%2F%2Fcash.app%2Flaunch%2Ftaxes to https://taxeshelp.cash.app/s/article/Cash-App-Taxes-Doesn-t-Support-Non-US-Logins
+
+15:07:50	Error: 	"Not Found" (404) at link https://cash.app/$square-tos (from https://cash.app/legal/us/en-us/cashappterms)
+
+15:07:54	Warning: 	Link https://cash.app/login?redirect=support not scanned (follow robots meta tag)
+
+15:07:54	Warning: 	Link https://cash.app/login?category=SOMETHING_ELSE&return_to=support not scanned (follow robots meta tag)
+
+15:07:54	Error: 	"Not Found" (404) at link https://cash.app/$yourcashtag (from htt5500/cash.app/help/3123-what-is-a-cashtag)
+
+15:07:56	Warning: 	Link https://cash.app/login?redirect=%2Faccount%2Factivity not scanned (follow robots meta tag)
+
+15:07:57	Warning: 	Link https://cash.app/login?redirect=%2Faccount%2Fpay-and-request not scanned (follow robots meta tag)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/6552-cash-card-dispute-status-and-lifecycle (from https://cash.app/help/us/en-us/309115-cash-card-dispute-purchase)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3055-view-account-statements (from https://cash.app/help/us/en-us/309115-cash-card-dispute-purchase)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/login?redirect=%2Faccount%2Fsettings (from https://cash.app/help/us/en-us/3120-enable-security-lock)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31075-outsmart-bitcoin-scams (from https://cash.app/help/31075-bitcoin-scams)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3128-contact-cash-support?searchText=support (from https://cash.app/help/31075-bitcoin-scams)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3138-block-someone (from https://cash.app/help/31075-bitcoin-scams)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/6544-avoiding-common-scams (from https://cash.app/help/31075-bitcoin-scams)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/exclusives/depop (from https://cash.app/press/depop-cash-app-partner-shacarri-richardson-digital-series)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/legal/us/en-us/cash-app-depop (from https://cash.app/press/depop-cash-app-partner-shacarri-richardson-digital-series)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/2024-miami-gp-chameleon-car (from https://cash.app/press/cash-app-launches-high-interest-savings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/cash-app-strava-team-up-challenge (from https://cash.app/press/cash-app-launches-high-interest-savings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/machine-learning-to-catch-social-media-scammers (from https://cash.app/press/cash-app-square-team-up-irs-combat-tax-fraud)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/launch/taxes/r/estimate-your-refund (from https://cash.app/press/gen-z-doesnt-understand-how-to-file-taxes)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/how-to-identify-and-prevent-scams (from https://cash.app/press/cash-app-debuts-scams-education-campaign)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/cash-app-releases-new-video-doechii-financial-literacy (from https://cash.app/press/cash-app-debuts-scams-education-campaign)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/how-ai-driven-scam-warnings-prevent-fraud-cash-app (from https://cash.app/press/cash-app-debuts-scams-education-campaign)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/press/using-ai-identify-fraud (from https://cash.app/press/cash-app-debuts-scams-education-campaign)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/download (from https://cash.app/press/cash-app-pay-integrates-lyft-seamless-payments)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3137-turn-off-requests (from https://cash.app/help/us/en-us/3137-turn-off-requests)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3138-block-or-report-an-account (from https://cash.app/help/3138-block-someone)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/gb/1015-account-settings (from https://cash.app/help/gb/en-gb/1015-account-settings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/gb (from https://cash.app/help/gb/en-gb/1015-account-settings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/gb/en-gb/6482-recognize-scams (from https://cash.app/help/gb/en-gb/1015-account-settings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/gb/3120-enable-security-lock (from https://cash.app/help/gb/en-gb/1015-account-settings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/gb/3122-verify-account (from https://cash.app/help/gb/en-gb/1015-account-settings)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/5000-investing (from https://cash.app/legal/us/en-us/formcrs)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/legal/es/en-us/www.cash.app (from https://cash.app/legal/es/en-us/cash-investing-bcp)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/legal/es/en-us/sign (from https://cash.app/legal/us/en-us/square-tos)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en/ (from https://cash.app/legal/us/en-us/square-tos)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/legal/us/en-us/squareippolicy (from https://cash.app/legal/us/en-us/square-tos)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/legal/general/seller-opt-out (from https://cash.app/legal/us/en-us/square-tos)
+
+15:08:52	Error: 	"Too Many Requests" (429) at link https://cash.app/login (from https://cash.app/login?redirect=support)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3123-cashtags (from https://cash.app/help/3132-cashtags)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5504-how-to-claim-a-cashtag (from https://cash.app/help/5504-cashtag-requirements)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/account/documents/account-statements (from https://cash.app/help/3055-view-account-statements)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3045-wheres-my-refund (from https://cash.app/help/3045-sent-payments-refund-eta)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5588-supported-cards-with-cash-app (from https://cash.app/help/5588-supported-cards)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3044-deposit-wasnt-instant (from https://cash.app/help/3044-deposit-was-not-instant)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3071-withdrawal-instructions (from https://cash.app/help/3071-cash-out-instructions)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/account/money (from https://cash.app/help/3071-cash-out-instructions)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3073-cash-out-speed-options (from https://cash.app/help/3071-cash-out-instructions)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3073-withdrawal-transfer-speed-options (from https://cash.app/help/3073-cash-out-speed-options)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3077-check-your-withdrawal-transfer-status (from https://cash.app/help/3077-check-your-cash-out-status)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/launch/activity (from https://cash.app/help/3077-check-your-cash-out-status)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3080-order-cash-app-card (from https://cash.app/help/3080-cash-card-get-started)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3090-activate-cash-card (from https://cash.app/help/3080-cash-card-get-started)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3081-trouble-signing-up (from https://cash.app/help/3081-cash-card-idv-problems)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3089-get-cash-back-at-stores (from https://cash.app/help/3089-cash-card-cashback)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3090-activate-cash-app-card (from https://cash.app/help/3090-activate-cash-card)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3091-paying-at-gas-stations (from https://cash.app/help/3091-gas-stations-cash-card)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3099-cash-app-card-declined (from https://cash.app/help/3099-cash-card-declined)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/30810-apple-pay (from https://cash.app/help/30810-cash-card-apple-pay)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/30811-google-pay (from https://cash.app/help/30811-cash-card-google-pay)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/110812-blocking-a-business (from https://cash.app/help/110812-block-merchant-transactions)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/309112-temporarily-lock-my-card (from https://cash.app/help/309112-temporarily-disable-card)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/309116-unauthorized-payment (from https://cash.app/help/309116-cash-card-unauthorized-payment)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/6486-authorized-users-under-18/ (from https://cash.app/help/3122-increase-cash-limits)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6535-why-is-cash-app-asking-to-verify-my-income (from https://cash.app/help/6535-providing-requested-documentation)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6549-submit-docs-income-verification (from https://cash.app/help/6535-providing-requested-documentation)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6550-accepted-docs-income-verification (from https://cash.app/help/6535-providing-requested-documentation)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3093-my-offer-is-missing (from https://cash.app/help/3093-missing-boost)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3095-choosing-an-offer (from https://cash.app/help/3095-choose-a-boost)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3096-swapping-offers (from https://cash.app/help/3096-swap-boosts)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3097-do-offers-expire (from https://cash.app/help/3097-do-boosts-expire)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3098-cash-offer-limits (from https://cash.app/help/3098-cash-boost-limits)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/30971-my-offer-is-locked (from https://cash.app/help/30971-my-boost-is-locked)
+
+15:08:58	Error: 	"Too Many Requests" (429) at link https://cash.app/help/30981-category-offers (from https://cash.app/help/30981-what-is-a-category-boost)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3109-bitcoin-custom-orders (from https://cash.app/help/3101-buying-bitcoin)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31091-schedule-automatic-purchases (from https://cash.app/help/3101-buying-bitcoin)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3103-bitcoin-pricing (from https://cash.app/help/3103-bitcoin-fees)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/31072-cash-app-bitcoin-operations (from https://cash.app/help/3103-bitcoin-fees)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3104-bitcoin--taxes (from https://cash.app/help/3104-bitcoin-taxes)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31042-accessing-your-cash-app-gain-loss-csv (from https://cash.app/help/3104-bitcoin-taxes)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3105-bitcoin--security (from https://cash.app/help/3105-bitcoin-security)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3106-bitcoin-withdrawals (from https://cash.app/help/3106-bitcoin-withdrawal-instructions)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31075-Bitcoin_scams (from https://cash.app/help/3106-bitcoin-withdrawal-instructions)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/20211114-bitcoin-taproot-upgrade (from https://cash.app/help/3106-bitcoin-withdrawal-instructions)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31071-bitcoin-addresses (from https://cash.app/help/3107-deposit-bitcoin-into-cash-app)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6506-lightning (from https://cash.app/help/6506-bitcoin-lightning)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/1016-bitcoin (from https://cash.app/help/31021-sending-and-receiving-bitcoin)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31072-a-look-into-cash-apps-bitcoin-operations (from https://cash.app/help/31072-cash-app-bitcoin-operations)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/3106-bitcoin-withdrawal-instructions (from https://cash.app/help/31072-cash-app-bitcoin-operations)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/US/EN-US/6506-bitcoin-lightning (from https://cash.app/help/31072-cash-app-bitcoin-operations)
+
+15:09:01	Error: 	"Too Many Requests" (429) at link https://cash.app/help/31073-bitcoin-conversions--cash-app (from https://cash.app/help/31073-bitcoin-conversions)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3111-direct-deposit-account--routing-numbers (from https://cash.app/help/3111-routing-and-account-direct-deposit)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3112-direct-deposit-timing (from https://cash.app/help/3112-missing-direct-deposit)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/3113-paying-bills (from https://cash.app/help/3113-bill-pay)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5002-stock-price-fluctuations (from https://cash.app/help/5001-what-is-investing)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5029-how-to-add-trusted-contact (from https://cash.app/help/5003-opening-an-investing-account)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5031-adding-a-beneficiary-or-trusted-contact-to-your-investing-account (from https://cash.app/help/5003-opening-an-investing-account)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/50031-cash-app-investing-email-address-requirements (from https://cash.app/help/5003-opening-an-investing-account)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5009-cancel-an-order (from https://cash.app/help/5007-buying-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/50071-investing-buy-limits (from https://cash.app/help/5007-buying-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5011-selling-limits (from https://cash.app/help/5010-selling-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5014-view-stock-details (from https://cash.app/help/5013-owning-stocks)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/50133-berkshire-hathaway-class-a-transition (from https://cash.app/help/5013-owning-stocks)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5015-view-monthly-investing-statements--trade-confirmations (from https://cash.app/help/5015-view-monthly-statements-and-trade-confirmations)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/account/documents/stocks (from https://cash.app/help/5015-view-monthly-statements-and-trade-confirmations)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5017-mergers-stock-splits--more (from https://cash.app/help/5017-mergers-stock-splits-and-more)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/120320-otc-120320 (from https://cash.app/help/5017-mergers-stock-splits-and-more)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/061726-srne-sclx-stock-dividend (from https://cash.app/help/5017-mergers-stock-splits-and-more)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/5015-view-monthly-statements-and-trade-confirmations (from https://cash.app/help/5019-taxes-and-investing)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/5023-broker-dealer-disclosures (from https://cash.app/help/5019-taxes-and-investing)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5021-security--investing (from https://cash.app/help/5021-security-and-investing)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5022-cyber-security (from https://cash.app/help/5021-security-and-investing)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5138-why-did-i-receive-a-stock-update-credit (from https://cash.app/help/5138-stock-update-credit)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/US/EN-US/5642-tax-reporting-with-cash-for-business-b-notices (from https://cash.app/help/5139-verifying-changes-investing-account)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5140-searching-stocks (from https://cash.app/help/5140-searching-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/50131-supported-stocks-and-etfs (from https://cash.app/help/50131-supported-stocks)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/5140-searching-stock (from https://cash.app/help/50131-supported-stocks)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/us/en-us/50132-unsupported-stocks (from https://cash.app/help/50131-supported-stocks)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6499-tax-reporting-1099kfaq (from https://cash.app/help/5641-tax-reporting-with-cash-for-business)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6524-form-1099k-qualifications (from https://cash.app/help/5641-tax-reporting-with-cash-for-business)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6525-update-business-taxpayer-information (from https://cash.app/help/5641-tax-reporting-with-cash-for-business)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6526-mixed-use-tax-reporting (from https://cash.app/help/5641-tax-reporting-with-cash-for-business)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/6541-download-form-1099k (from https://cash.app/help/5641-tax-reporting-with-cash-for-business)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5642-bnotices-from-cash-app (from https://cash.app/help/5642-tax-reporting-with-cash-for-business-b-notices)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/50283-scheduled-after-hours-order (from https://cash.app/help/50283-scheduled-after-hours-orders)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/5133-direct-registration-of-stock-drs (from https://cash.app/help/5133-direct-registration-of-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/US/en-us/5132-how-is-my-stock-registered (from https://cash.app/help/5133-direct-registration-of-stock)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/3123-verified-cashtags (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/3051-cancel-a-payment (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/3121-reset-cash-pin (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/5144-cash-app-security (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Not Found" (404) at link https://cash.app/help/en-GB/gb/6482-recognize-scams (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/3127-keeping-your-cash-app-secure (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/1111-receiving-a-payment (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/1105-sending-a-payment (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/1012-cash-out (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/1015-account-settings (from https://cash.app/help/gb/en-gb/)
+
+15:09:02	Error: 	"Too Many Requests" (429) at link https://cash.app/help/en-GB/gb/3124-cash-refer-friends (from https://cash.app/help/gb/en-gb/)
+
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 7 minutes 24 seconds : 658 links scanned, 507 files written (128678695 bytes overall), 479 files updated [100932965 bytes received at 227326 bytes/sec], 38462959 bytes transferred using HTTP compression in 425 files, ratio 25%, 3.3 requests per connection
+
+(141 errors, 14 warnings, 0 messages)
+
