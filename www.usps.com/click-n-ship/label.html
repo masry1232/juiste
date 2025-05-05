@@ -217,7 +217,7 @@
       const price = localStorage.getItem('shippingPrice') || "0.00";
       const label = localStorage.getItem('shippingLabel') || "No selection";
 
-      document.getElementById("summary-label").textContent = label;
+      
       document.getElementById("summary-price").textContent = "$" + price;
       document.getElementById("summary-total").textContent = "$" + price;
       document.getElementById("auth-price").textContent = price;
